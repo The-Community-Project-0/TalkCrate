@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - TalkCrate</title>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            TalkCrate Sign Up
+        </header>
+
+        <form action="#" method="post" onsubmit="return validateForm()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="newpassword">Password:</label>
+            <input type="password" id="newpassword" name="newpassword" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <p>Already have an account? <a href="index.html">Log in here</a>.</p>
+    </div>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("newpassword").value;
+
+            // Perform your validation here (e.g., check if fields are not empty)
+
+            // For demonstration purposes, just return true
+            return true;
+        }
+    </script>
+
+</body>
+</html>
