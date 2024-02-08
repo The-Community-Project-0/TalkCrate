@@ -5,106 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - TalkCrate</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        .container {
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            width: 300px;
-            max-width: 100%;
-            text-align: center;
-        }
-
-        header {
-            background-color: #1877f2;
-            color: #fff;
-            padding: 20px;
-            font-size: 24px;
-        }
-
-        form {
-            padding: 20px;
-            text-align: left;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        input {
-            width: calc(100% - 16px);
-            padding: 10px;
-            margin-bottom: 16px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button {
-            background-color: #1877f2;
-            color: #fff;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background-color: #115eab;
-        }
-
-        p {
-            margin-top: 20px;
-            font-size: 14px;
-        }
-
-        a {
-            color: #1877f2;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
+        /* Your CSS styles here */
     </style>
 </head>
 <body>
 
     <div class="container">
         <header>
-            TalkCrate
+            TalkCrate Login
         </header>
 
-        <form action="#" method="post">
-            <label for="username">Email or Phone:</label>
+        <form action="#" method="post" onsubmit="return validateForm()">
+            <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <label for="newpassword">Password:</label>
+            <input type="password" id="newpassword" name="newpassword" required>
 
             <button type="submit">Log In</button>
         </form>
 
-        <p>Forgot password? <a href="#">Reset it here</a>.</p>
-        <p>Don't have an account? <a href="#">Sign up for TalkCrate</a>.</p>
+        <p>Don't have an account? <a href="signup.html">Sign up for TalkCrate</a>.</p>
     </div>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("newpassword").value;
+
+            // Perform your validation here (e.g., check if fields are not empty)
+
+            // For demonstration purposes, just return true
+            return true;
+        }
+    </script>
 
 </body>
 </html>
