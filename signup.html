@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - TalkCrate</title>
     <style>
-        /* Your CSS styles here */
     </style>
 </head>
 <body>
@@ -32,13 +31,6 @@
         function validateForm() {
             var username = document.getElementById("username").value;
             var password = document.getElementById("newpassword").value;
-
-            // Perform your client-side validation here (e.g., check if fields are not empty)
-
-            // For demonstration purposes, just return true
-            // You can replace this with more comprehensive validation
-
-            // Make a POST request to your Vercel serverless function
             fetch('https://https://talk-crate-d9uc.vercel.app//api/signup', {
                 method: 'POST',
                 headers: {
